@@ -1,5 +1,6 @@
 package hu.bme.mit.spaceship;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /**
@@ -28,7 +29,7 @@ public class TorpedoStore {
     }
   }
 
-  private Random generator = new Random();
+  private Random generator = new SecureRandom();
 
   public boolean fire(int numberOfTorpedos) {
     if (numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount) {
